@@ -12,6 +12,10 @@ Buat program yang menghitung harga tiket bioskop. Tiket reguler berharga Rp50.00
 Petunjuk:
 Gunakan if else dan operator ternary.
 
+
+##flowchart pemograman
+
+
 "python"
 def hitung_harga_tiket():
     jenis_tiket = input("Masukkan jenis tiket (reguler/VIP): ").lower()
@@ -57,3 +61,75 @@ print("Total harga yang harus dibayar: Rp", harga_akhir)
 Fungsi print() digunakan untuk menampilkan hasil perhitungan ke layar.
 hitung_harga_tiket()
 Baris terakhir ini digunakan untuk memanggil fungsi hitung_harga_tiket() yang telah kita definisikan sebelumnya.
+
+##hasil code screenshot
+
+
+Kasus 2: Program Kalkulator Sederhana
+
+Buat program kalkulator yang menerima dua angka dan satu operator aritmatika dari pengguna (penjumlahan, pengurangan, perkalian, atau pembagian). Program akan menghitung hasil sesuai dengan operator yang dipilih.
+Petunjuk:
+Gunakan if elif else untuk menentukan operasi aritmatika.
+
+
+## flowchart pemograman
+
+
+``python``
+def kalkulator():
+  """Fungsi untuk menghitung operasi aritmatika sederhana"""
+
+  angka1 = float(input("Masukkan angka pertama: "))
+  angka2 = float(input("Masukkan angka kedua: "))
+  operator = input("Masukkan operator (+, -, *, /): ")
+
+  if operator == '+':
+    hasil = angka1 + angka2
+  elif operator == '-':
+    hasil = angka1 - angka2
+  elif operator == '*':
+    hasil = angka1 * angka2
+  elif operator == '/':
+    if angka2 == 0:
+      print("Tidak dapat membagi dengan nol.")
+    else:
+      hasil = angka1 / angka2
+  else:
+    print("Operator tidak valid.")
+
+  if 'hasil' in locals():
+    print("Hasil:", hasil)
+
+kalkulator()
+
+## penjelasan setiap code
+def kalkulator():
+Ini adalah baris untuk mendefinisikan sebuah fungsi bernama kalkulator. Fungsi ini akan berisi kumpulan perintah yang akan dijalankan ketika fungsi ini dipanggil.
+"""Fungsi untuk menghitung operasi aritmatika sederhana"""
+Ini adalah dokumentasi (docstring) yang menjelaskan tujuan dari fungsi kalkulator.
+angka1 = float(input("Masukkan angka pertama: "))
+Baris ini meminta pengguna untuk memasukkan angka pertama dan menyimpannya dalam variabel angka1. Fungsi float() digunakan untuk mengubah input pengguna menjadi bilangan desimal.
+angka2 = float(input("Masukkan angka kedua: "))
+Sama seperti di atas. 
+operator = input("Masukkan operator (+, -, *, /): ")
+Baris ini meminta pengguna untuk memasukkan operator yang ingin digunakan (+, -, *, atau /) dan menyimpannya dalam variabel operator
+if operator == '+':
+Ini adalah awal dari sebuah kondisi if. Jika operator yang dipilih adalah '+', maka program akan menjalankan perintah di dalam blok if ini.
+hasil = angka1 + angka2
+Jika kondisi if benar, maka hasil penjumlahan angka1 dan angka2 akan disimpan dalam variabel hasil
+elif operator == '-':
+Ini adalah kondisi elif (kependekan dari else if). Jika kondisi if sebelumnya salah, tetapi operator adalah '-', maka program akan menjalankan perintah di dalam blok elif ini.
+hasil = angka1 - angka2
+Jika kondisi elif benar, maka hasil pengurangan angka1 dan angka2 akan disimpan dalam variabel hasil
+elif operator == '*' dan elif operator == '/':
+Kondisi elif ini bekerja dengan cara yang sama seperti sebelumnya, tetapi untuk operasi perkalian dan pembagian
+if angka2 == 0:
+Dalam kasus pembagian, program akan memeriksa apakah angka2 bernilai 0. Jika iya, maka tidak dapat dilakukan pembagian karena pembagian dengan nol tidak terdefinisi.
+print("Hasil:", hasil)
+Jika variabel hasil sudah memiliki nilai (artinya, operasi telah dilakukan dengan benar), maka program akan mencetak hasil perhitungan.
+kalkulator()
+Baris terakhir ini memanggil fungsi kalkulator() sehingga semua perintah di dalam fungsi akan dijalankan.
+
+
+## hasil code screenshot
+
